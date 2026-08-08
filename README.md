@@ -59,3 +59,4 @@ pnpm lint     # ESLint
 As rotas `/hub` e `/dashboard` exigem sessão autenticada. O fluxo de login e criação de conta usa Supabase Auth; o callback `/auth/callback` troca o código de confirmação por uma sessão server-side.
 
 As políticas de acesso aos dados devem permanecer configuradas no Supabase com Row Level Security (RLS).
+
