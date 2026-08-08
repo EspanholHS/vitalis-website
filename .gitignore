@@ -1,4 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+﻿# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -31,8 +31,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
-
+.env*`r`n!.env.example
 # vercel
 .vercel
 
@@ -46,3 +45,4 @@ Design_Standard..md
 PRODUCT.md
 Vitalis_Contexto_Geral_Codex.pdf
 ezgif-64842056d705e79f-jpg.zip
+
