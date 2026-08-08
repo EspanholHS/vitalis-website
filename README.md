@@ -60,3 +60,8 @@ As rotas `/hub` e `/dashboard` exigem sessão autenticada. O fluxo de login e cr
 
 As políticas de acesso aos dados devem permanecer configuradas no Supabase com Row Level Security (RLS).
 
+
+## Produção
+
+https://vitalis-website-main.vercel.app
+
