@@ -1,0 +1,20 @@
+﻿import { NextResponse } from "next/server";
+
+import { createClient } from "@/lib/supabase/server";
+
+function safeNextPath(value: string | null) {
+  return value?.startsWith("/") && !value.startsWith("//") ? value : "/hub";
+}
+
+export async function GET(request: Request) {
+  const url = new URL(request.url);
+  const code = url.searchParams.get("code");
+  const nextPath = safeNextPath(url.searchParams.get("next"));
+
+  if (code) {
+    const supabase = await createClient();
+    await supabase.auth.exchangeCodeForSession(code);
+  }
+
+  return NextResponse.redirect(new URL(nextPath, url.origin));
+}
